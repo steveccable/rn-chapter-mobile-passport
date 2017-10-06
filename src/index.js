@@ -1,7 +1,8 @@
 import React from 'react';
+import MapScreen from './Components/MapScreen/MapScreen';
 
 const App = () => {
-    return  null;
+    return  <MapScreen/>
 };
 
 export default App;
