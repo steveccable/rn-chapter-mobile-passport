@@ -1,6 +1,8 @@
 import React from 'react';
 import MapScreen from './Components/MapScreen/MapScreen';
 import firebase from 'firebase';
+import FeedbackScreen from './Components/FeedbackScreen/FeedbackScreen';
+import { StackNavigator } from 'react-navigation';
 
 // Initialize Firebase
 // Firebase Console for this project can be found at https://console.firebase.google.com/u/0/project/mobile-passport/overview
@@ -14,9 +16,9 @@ const firebaseConfig = {
 };
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
-
-const App = () => {
-    return  <MapScreen/>
-};
+const App = StackNavigator({
+    Map: { screen: MapScreen },
+    Feedback: { screen: FeedbackScreen }
+});
 
 export default App;

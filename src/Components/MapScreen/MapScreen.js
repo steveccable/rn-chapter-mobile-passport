@@ -4,8 +4,9 @@ import Button from 'react-native-button';
 import PinchZoomView from 'react-native-pinch-zoom-view';
 import style from './MapScreenStyleSheet'
 
-class MapScreen extends Component {
+class MapScreen extends React.Component {
     render() {
+        const { navigate } = this.props.navigation;
         return (
             <PinchZoomView style={style.container} >
                 <Image
@@ -14,6 +15,8 @@ class MapScreen extends Component {
                     resizeMode="contain"
               />
               <Button
+              onPress={() =>
+                navigate('Feedback')}
                 containerStyle={style.buttonContainer}
                 style={style.buttonStyle}>
                 Feedback
