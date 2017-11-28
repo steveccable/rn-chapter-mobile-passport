@@ -1,6 +1,6 @@
 import React from 'react';
 import MapScreen from './Components/MapScreen/MapScreen';
-import * as firebase from 'firebase';
+import firebase from 'firebase';
 
 // Initialize Firebase
 // Firebase Console for this project can be found at https://console.firebase.google.com/u/0/project/mobile-passport/overview
